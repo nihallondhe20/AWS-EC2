@@ -1,0 +1,9 @@
+To increase Ram in EC2 use following steps
+1)---Go with running volume and --modify volume
+2) Now login with this instance and ssh
+3) Now check added volume by using #lsblk
+4) added volume can see using xvda==
+5) Now run #sudo growpart /dev/xvda 1   ----- (1) indicate first root volume
+6) Now again check volume lsblk it will be updated
+7) Now run #sudo resize2fs /dev/xvda1   now all will done.
+8) Now confirm updated volume using #df -h
